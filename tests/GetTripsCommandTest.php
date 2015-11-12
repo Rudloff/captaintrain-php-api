@@ -1,9 +1,29 @@
 <?php
-
+/**
+ * GetTripsCommandTest class
+ *
+ * PHP version 5.6
+ *
+ * @category CaptainTrain
+ * @package  CaptainTrain
+ * @author   Pierre Rudloff <contact@rudloff.pro>
+ * @license  LGPL https://www.gnu.org/copyleft/lesser.html
+ * @link     https://github.com/Rudloff/captaintrain-php-api
+ */
 use CaptainTrain\GetTripsCommand;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
-
+/**
+ * Test GetTripsCommand class
+ *
+ * PHP version 5.6
+ *
+ * @category CaptainTrain
+ * @package  CaptainTrain
+ * @author   Pierre Rudloff <contact@rudloff.pro>
+ * @license  LGPL https://www.gnu.org/copyleft/lesser.html
+ * @link     https://github.com/Rudloff/captaintrain-php-api
+ */
 class GetTripsCommandTest extends PHPUnit_Framework_TestCase
 {
     /**
