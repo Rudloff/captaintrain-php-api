@@ -1,4 +1,15 @@
 <?php
+/**
+ * GetTripsCommand class
+ *
+ * PHP version 5.6
+ *
+ * @category CaptainTrain
+ * @package  CaptainTrain
+ * @author   Pierre Rudloff <contact@rudloff.pro>
+ * @license  LGPL https://www.gnu.org/copyleft/lesser.html
+ * @link     https://github.com/Rudloff/captaintrain-php-api
+ */
 namespace CaptainTrain;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -6,16 +17,16 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 /**
- * CLI search command
+ * CLI get:trips command
  *
- * PHP Version 5.4
+ * PHP version 5.6
  *
- * @category API
- * @package  Infogreffe
+ * @category CaptainTrain
+ * @package  CaptainTrain
  * @author   Pierre Rudloff <contact@rudloff.pro>
  * @license  LGPL https://www.gnu.org/copyleft/lesser.html
- * @link     https://github.com/Rudloff/infogreffe-unofficial-api
- * */
+ * @link     https://github.com/Rudloff/captaintrain-php-api
+ */
 class GetTripsCommand extends Command
 {
     /**
@@ -52,8 +63,10 @@ class GetTripsCommand extends Command
 
         foreach ($session->getTrips() as $trip) {
             $output->writeln(
-                $trip->departureStation->name.' - '.$trip->arrivalStation->name.':'.PHP_EOL.'    '.
-                $trip->departureDate->format('r').' - '.$trip->arrivalDate->format('r')
+                $trip->departureStation->name.' - '.$trip->arrivalStation->name.
+                ':'.PHP_EOL.'    '.
+                $trip->departureDate->format('r').' - '.
+                $trip->arrivalDate->format('r')
             );
         }
     }
