@@ -35,15 +35,19 @@ class Session
     function __construct($email, $password)
     {
         $this->_client = new \GuzzleHttp\Client();
-        $response = $this->_client->request(
-            'POST', 'https://www.captaintrain.com/api/v5/account/signin',
-            array(
-                'query' => array(
-                    'email' => 'contact@rudloff.pro',
-                    'password'=>'bahamut'
+        try {
+            $response = $this->_client->request(
+                'POST', 'https://www.captaintrain.com/api/v5/account/signin',
+                array(
+                    'query' => array(
+                        'email' => $email,
+                        'password'=>$password
+                    )
                 )
-            )
-        );
+            );
+        } catch (\GuzzleHttp\Exception\ClientException $e) {
+            throw new \Exception('Wrong credentials');
+        }
         $json = json_decode($response->getBody());
         $this->_token = $json->meta->token;
     }
