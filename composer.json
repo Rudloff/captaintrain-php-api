@@ -1,4 +1,7 @@
 {
+    "name": "rudloff/captaintrain-php-api",
+    "description": "Small library that helps you build applications that communicate with the Captain Train API",
+    "license": "LGPL-3.0",
     "require": {
         "guzzlehttp/guzzle": "~6.1.0",
         "symfony/console": "~2.7.5",

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "67f1f1df1c6b3c1b567b1a683b148631",
-    "content-hash": "3c7439f5eba0613ccc93982aea8954d2",
+    "hash": "ccb64196bb38cb4b84af7f7e67694c24",
+    "content-hash": "fafd1730797a2f7a586837cfa04efe55",
     "packages": [
         {
             "name": "captaintrain/stations",
