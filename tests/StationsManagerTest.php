@@ -1,31 +1,35 @@
 <?php
 /**
- * StationsManagerTest class
+ * StationsManagerTest class.
  *
  * PHP version 5.6
  *
  * @category CaptainTrain
- * @package  CaptainTrain
+ *
  * @author   Pierre Rudloff <contact@rudloff.pro>
  * @license  LGPL https://www.gnu.org/copyleft/lesser.html
+ *
  * @link     https://github.com/Rudloff/captaintrain-php-api
  */
 use CaptainTrain\StationsManager;
+
 /**
- * Test StationsManager class
+ * Test StationsManager class.
  *
  * PHP version 5.6
  *
  * @category CaptainTrain
- * @package  CaptainTrain
+ *
  * @author   Pierre Rudloff <contact@rudloff.pro>
  * @license  LGPL https://www.gnu.org/copyleft/lesser.html
+ *
  * @link     https://github.com/Rudloff/captaintrain-php-api
  */
 class StationsManagerTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * Setup tests
+     * Setup tests.
+     *
      * @return void
      */
     protected function setUp()
@@ -34,7 +38,8 @@ class StationsManagerTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test getById function
+     * Test getById function.
+     *
      * @return void
      */
     public function testGetById()
