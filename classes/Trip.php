@@ -1,26 +1,28 @@
 <?php
 /**
- * Trip class
+ * Trip class.
  *
  * PHP version 5.6
  *
  * @category CaptainTrain
- * @package  CaptainTrain
+ *
  * @author   Pierre Rudloff <contact@rudloff.pro>
  * @license  LGPL https://www.gnu.org/copyleft/lesser.html
+ *
  * @link     https://github.com/Rudloff/captaintrain-php-api
  */
 namespace CaptainTrain;
 
 /**
- * Manage trips
+ * Manage trips.
  *
  * PHP version 5.6
  *
  * @category CaptainTrain
- * @package  CaptainTrain
+ *
  * @author   Pierre Rudloff <contact@rudloff.pro>
  * @license  LGPL https://www.gnu.org/copyleft/lesser.html
+ *
  * @link     https://github.com/Rudloff/captaintrain-php-api
  */
 class Trip
@@ -31,13 +33,14 @@ class Trip
     public $departureStation;
 
     /**
-     * Trip class constructor
+     * Trip class constructor.
+     *
      * @param string $arrivalDate        Arrival date
      * @param string $departureDate      Departure date
      * @param int    $arrivalStationId   Arrival station ID
      * @param int    $departureStationId Departure station ID
      */
-    function __construct(
+    public function __construct(
         $arrivalDate, $departureDate, $arrivalStationId, $departureStationId
     ) {
         $stations = StationsManager::getInstance();

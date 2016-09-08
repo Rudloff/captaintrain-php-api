@@ -1,25 +1,28 @@
 <?php
 /**
- * StationsManager class
+ * StationsManager class.
  *
  * PHP version 5.6
  *
  * @category CaptainTrain
- * @package  CaptainTrain
+ *
  * @author   Pierre Rudloff <contact@rudloff.pro>
  * @license  LGPL https://www.gnu.org/copyleft/lesser.html
+ *
  * @link     https://github.com/Rudloff/captaintrain-php-api
  */
 namespace CaptainTrain;
+
 /**
- * Singleton used to get stations
+ * Singleton used to get stations.
  *
  * PHP version 5.6
  *
  * @category CaptainTrain
- * @package  CaptainTrain
+ *
  * @author   Pierre Rudloff <contact@rudloff.pro>
  * @license  LGPL https://www.gnu.org/copyleft/lesser.html
+ *
  * @link     https://github.com/Rudloff/captaintrain-php-api
  */
 class StationsManager
@@ -28,9 +31,9 @@ class StationsManager
     private $_stations;
 
     /**
-     * StationsManager class constructor
+     * StationsManager class constructor.
      */
-    function __construct()
+    public function __construct()
     {
         $handle = fopen(
             __DIR__.'/../vendor/captaintrain/stations/stations.csv', 'r'
@@ -46,23 +49,27 @@ class StationsManager
     }
 
     /**
-     * Get singleton instance
+     * Get singleton instance.
+     *
      * @return StationsManager
      */
     public static function getInstance()
     {
         if (is_null(self::$_instance)) {
-            self::$_instance = new StationsManager();
+            self::$_instance = new self();
         }
+
         return self::$_instance;
     }
 
     /**
-     * Get station by ID
-     * @param  int $id Station ID
+     * Get station by ID.
+     *
+     * @param int $id Station ID
+     *
      * @return Station
      */
-    function getById($id)
+    public function getById($id)
     {
         return $this->_stations[$id];
     }
